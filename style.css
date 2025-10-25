@@ -7,13 +7,13 @@
 body {
   display: flex;
   justify-content: center;
-  background-color: #4803038d;
+  background-color: #252121;
 }
 .card {
-    margin-top: 04%;
+  margin-top: 2%;
   background-color: red;
-  width: 60%;
-  max-width: 400px;
+  width: 50%;
+  max-width: 500px;
   background: #1a2980d0; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -28,7 +28,7 @@ body {
 
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#CAEFD7", endColorstr="#F5BFD7", GradientType=1 );
   border-radius: 21px;
-  padding: 30px 40px;
+  padding: 20px 20px;
   text-align: center;
 }
 .search {
@@ -51,7 +51,7 @@ body {
 .search input:hover {
   background-color: #b9cbe598;
   outline: 3px solid #00ff9915;
-  outline-offset: 5px;
+  outline-offset: 1px;
 }
 .search button {
   border: 0;
@@ -61,6 +61,8 @@ body {
   height: 35px;
   width: 35px;
   border-radius: 50px;
+  transition: 0.5s ease-out;
+  /* box-shadow: 5px 10px 15px 0px rgba(0,0,0,0.3); */
 }
 .search button img {
   padding-top: 3px;
@@ -72,9 +74,47 @@ body {
   font-style: italic;
 }
 .weather img {
-  margin-top: 20px;
-  border: 0;
-  outline: 0;
-  height: 105px;
-  width: 105px;
+  /* margin-top: 20px; */
+  margin-top: 5%;
+  height: 130px;
+  width: 130px;
 }
+.weather h1{
+  font-family: "PT Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  font-style: normal;
+}
+.weather h2{
+    font-family: "PT Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: -10px;
+}
+.details{
+    /* background-color: green; */
+    display: flex;
+    align-items:center;
+    padding: 0px 20px;
+    justify-content: space-between;
+}
+/* col is the class of both humidity and wind speed */
+.col{
+    color: #cad6dc;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding:  0px 10px;
+}
+.col img{
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.col div{
+  font-size: 18px;
+  font-family: "PT Sans", sans-serif;
+}
+
+
+

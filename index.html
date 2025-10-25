@@ -4,22 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
     <title>Weather</title>
 </head>
 <body>
     <div class="card">
         <!-- under this all the detail is laid down the  -->
-        <div class="search">
+        <div class="search"> 
             <!-- it is the container for the search part that is on the top -->
-            <input type="text" placeholder="Enter the city name" spellcheck="false">
-            <button><img src="icons8-search-50.png" alt="search"></button>
+            <input type="text" placeholder="        Enter the city name" spellcheck="false" id="searchBar">
+            <button id="searchBttn"><img src="icons8-search-50.png" alt="search"></button>
         </div>
 
         <div class="weather">
             <!-- this is meant to show the weather img and temp -->
-             <img src="weather.img/storm.png" alt="weatherImage">
+             <img src="weather.img/storm.png" alt="weatherImage" class="weather-icon">
              <h1 class="temperature">28°C</h1>
              <h2 class="city">New york</h2>
+             <div class="details">
+                <!-- this will contain the two part one humidity other is wind  -->
+                 <div class="col">
+                    <img src="weather.img/weather.png" alt="wind" class="details-imges">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+             </div>
+             <div class="col">
+                    <img src="weather.img/air-quality.png" alt="wind" class="details-imges">
+                    <div>
+                        <p class="wind">15 Km/hr</p>
+                        <p>Wind Speed</p>
+                    </div>
+                 </div>
         </div>
     </div>
 </body>
