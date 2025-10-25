@@ -8,6 +8,28 @@ const temperature = document.querySelector(".temperature");
 const city = document.querySelector(".city");
 const humidity = document.querySelector(".humidity");
 const wind = document.querySelector(".wind");
+const icon = document.querySelector(".weather-icon");
+
+
+const changeIcon = (weatherMain) => {
+  const weather = weatherMain.toLowerCase(); // Normalize case
+
+  const iconMap = {
+    clear:"weather.img/sunny.png",
+    rain: "weather.img/rain.png",
+    snow: "weather.img/snowy.png",
+    mist: "weather.img/haze.png",
+    dust: "weather.img/dust.png",
+    fog:  "weather.img/fog.png",
+    thunderstorm: "weather.img/heavy-rain.png",
+    clouds: "weather.img/clouds.png",
+    haze: "weather.img/haze.png", // added because OWM uses this often
+    smoke: "weather.img/smoke.png", // optional extra
+  };
+
+  // fallback icon
+  icon.src = iconMap[weather] || "icons/default.png";
+};
 
 async function checkWeather(SearchedCity) {
   const response = await fetch(apiUrl + SearchedCity + `&appid=${apiKey}`); // basic api plus city name and then api key that i own
@@ -17,6 +39,9 @@ async function checkWeather(SearchedCity) {
   temperature.innerHTML = data.main.temp;
   humidity.innerHTML = `${data.main.humidity} %`;
   wind.innerHTML = `${data.wind.speed} km/hr`;
+  changeIcon(data.weather[0].main)
+  console.log(data.weather[0].main);
+  
 }
 checkWeather();
 searchBttn.addEventListener("click", () => {
