@@ -12,8 +12,8 @@ body {
 .card {
   margin-top: 2%;
   background-color: red;
-  width: 50%;
-  max-width: 500px;
+  width: 90%;
+  max-width: 400px;
   background: #1a2980d0; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -28,7 +28,7 @@ body {
 
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#CAEFD7", endColorstr="#F5BFD7", GradientType=1 );
   border-radius: 21px;
-  padding: 20px 20px;
+  padding: 20px 5px;
   text-align: center;
 }
 .search {
@@ -81,13 +81,13 @@ body {
 }
 .weather h1{
   font-family: "PT Sans", sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: 900;
   font-style: normal;
 }
 .weather h2{
     font-family: "PT Sans", sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 700;
     margin-top: -10px;
 }
@@ -115,6 +115,16 @@ body {
   font-size: 18px;
   font-family: "PT Sans", sans-serif;
 }
-
+@media(min-width = 500px){
+  .card{
+    background-color: green;
+  }
+  .weather h1{
+  font-size: 30px;
+}
+.weather h2{
+    font-size: 30px;
+}
+}
 
 
