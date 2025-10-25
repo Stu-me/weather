@@ -20,7 +20,9 @@ async function checkWeather(SearchedCity) {
 }
 checkWeather();
 searchBttn.addEventListener("click", () => {
-  checkWeather(searchBar.value);
+  checkWeather(searchBar.value.trim());
+  console.log(searchBar.value.trim());
+  
   searchBttn.style.backgroundColor = "#312f2dd0";
   searchBttn.style.outline = "3px solid #1a2980d0";
   searchBttn.style.outlineOffset = "6px";

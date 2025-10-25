@@ -114,16 +114,15 @@ body {
 .col div{
   font-size: 18px;
   font-family: "PT Sans", sans-serif;
+  transition: 0.5s ease-in;
 }
-@media(min-width = 500px){
+@media(max-width:450px){
   .card{
-    background-color: green;
+    background-color: rgb(10, 58, 215);
   }
-  .weather h1{
-  font-size: 30px;
-}
-.weather h2{
-    font-size: 30px;
+  .col div{
+  font-size: 14px;
+  font-family: "PT Sans", sans-serif;
 }
 }
 
